@@ -42,7 +42,7 @@ calculateAge.addEventListener('submit', function(event) {
   let currentYear = date.getFullYear() // current year;
   let months_ = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] // random array for 31 28 30 calculated;
 
- if(userDateOfBirth && userBirthMonth && userBirthYears && userBirthYears > 1000){
+ if(userDateOfBirth)
   if(userDateOfBirth > todayDate){  // checking if userdate > today date
     todayDate = todayDate + months_[currentMonth - 1]; // 44
     currentMonth = currentMonth - 1; //7
@@ -85,9 +85,5 @@ close
     item.remove();
     location.reload();
   })
- }else{
-  alert('please give correct value')
- }
-  
 });
 

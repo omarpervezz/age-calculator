@@ -42,51 +42,8 @@ calculateAge.addEventListener('submit', function(event) {
   let currentYear = date.getFullYear() // current year;
   let months_ = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] // random array for 31 28 30 calculated;
 
- if(userDateOfBirth && userBirthMonth && userBirthYears && userBirthYears > 1000){
-  if(userDateOfBirth > todayDate){  // checking if userdate > today date
-    todayDate = todayDate + months_[currentMonth - 1]; // 44
-    currentMonth = currentMonth - 1; //7
-  }
-if(userBirthMonth > currentMonth){
-  console.log(currentMonth);
-  currentMonth = currentMonth + 12; // 19
-  console.log(currentMonth);
-  currentYear = currentYear - 1; // 2021
-}
+ if(userDateOfBirth && userBirthMonth && userBirthYears){
 
-  let d = todayDate - userDateOfBirth; // 13 - 20 = -7
-  console.log(currentMonth);
-  console.log(userBirthMonth);
-  let m = currentMonth - userBirthMonth // 8 - 12 == -4;
-  let y = currentYear - userBirthYears // 2022 - 1990 32;
-
-  const box = document.querySelector('.box');
-
-  box.innerHTML += `
-  <div class="result_box">
-  <span class="material-symbols-outlined" id="close-item">
-close
-</span>
-
-  <div class="result_content">
-   <div>
-     <span>Your Age</span><span>${y} Years</span>
-   </div>
-   <div><span>Your Month</span><span>${m} Month</span></div>
-   <div>
-     <span>Your Days</span><span>${d} Days</span>
-   </div>
-  </div>
-</div>
-  `
-  const item = document.querySelector('.result_box');
-  const closeItem = document.querySelector('#close-item');
-  closeItem.addEventListener('click', function(event){
-    item.remove();
-    location.reload();
-  })
- }else{
-  alert('please give correct value')
  }
   
 });

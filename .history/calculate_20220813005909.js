@@ -85,8 +85,6 @@ close
     item.remove();
     location.reload();
   })
- }else{
-  alert('please give correct value')
  }
   
 });

@@ -14,10 +14,10 @@ body{
   --width:100%;
 }
 html{
-  font-size: 62.5%;
+  font-size: ;
 }
 h1{
-  font-size: 2.9rem;
+  font-size: 1.5rem;
   margin-bottom: .4rem;
   padding-top: 1rem;
   line-height: 38px;
@@ -26,7 +26,6 @@ h1{
 h2{
   text-align: center;
   margin-top: 3rem;
-  font-size: 2rem;
 }
 .info span{
   color: #b3f1b3;
@@ -51,8 +50,8 @@ h2{
 .box label{
   width:100%;
   display: block;
-  font-size: 1.5rem;
-  margin-bottom: .9rem;
+  font-size: 1.1rem;
+  margin-bottom: .3rem;
   padding: 0 .8rem;
 }
 .box label span{
@@ -90,7 +89,7 @@ h2{
   padding: .9rem .9rem;
   border-top-right-radius: .9rem;
   border-bottom-left-radius: .9rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   cursor: pointer;
   background: #84e7e7;
   margin-top: .9rem;
@@ -137,4 +136,10 @@ h2{
   cursor: pointer;
   color: #4febf3;
   font-weight: normal;
+}
+
+@media (max-width:476px){
+  .container{
+    max-width: calc(var(--width) - 10%);
+  }
 }

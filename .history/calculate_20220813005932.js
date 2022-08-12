@@ -86,7 +86,7 @@ close
     location.reload();
   })
  }else{
-  alert('please give correct value')
+  alert('please correct value')
  }
   
 });
