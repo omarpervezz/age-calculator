@@ -1,0 +1,373 @@
+body {
+  background: linear-gradient(rgb(5 5 5 / 22%), rgb(5 5 5 / 49%)),
+    url(../img/R.jpg);
+  color: white;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+:root {
+  --width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+h1,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 2.9rem;
+  margin-bottom: 0.4rem;
+  padding-top: 1rem;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 3.2rem;
+}
+
+.info span {
+  color: rgb(179, 241, 179);
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.age_calculator_container {
+  width: 100%;
+}
+
+.container {
+  max-width: calc(var(--width) - 30%);
+  margin: auto;
+}
+
+.box {
+  background-color: hsl(192deg 17% 12% / 22%);
+  overflow: hidden;
+  padding: 2rem 4rem;
+  height: fit-content;
+  border: 0.2rem solid rgba(13, 129, 185, 0.45);
+  border-radius: 0.8rem;
+  backdrop-filter: blur(3px);
+}
+
+.box div {
+  width: 100%;
+}
+
+.box label {
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0px 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.box label span {
+  color: red;
+  margin-top: 0rem;
+  font-size: 1.3rem;
+}
+
+.box input {
+  padding: 0.9rem;
+  margin-bottom: 0.4rem;
+  border-top-right-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s linear 0s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.addFocused {
+  background: rgb(0, 0, 0);
+  border: 0.2rem solid rgb(15, 71, 104);
+  color: white;
+}
+
+.addFocused::placeholder {
+  color: white;
+  text-transform: capitalize;
+}
+
+.submit_ {
+  width: 82%;
+}
+
+.submit_ button {
+  width: 100%;
+  border-top-right-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: hsl(0deg 0% 1.96%);
+  margin-top: 2.3rem;
+  color: white;
+  border: 1px solid #608da8;
+  padding: 1.2rem 0;
+  font-weight: 600;
+  
+}
+.result__container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+ 
+}
+
+div.showToggle{
+  opacity: 1;
+  visibility: visible;
+}
+.result_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+  
+}
+
+.result___ {
+  width: 100%;
+  height: 98%;
+  padding: 1.2rem 0rem;
+  background: hsl(0deg 0% 100%);
+  color: black;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.result___ #clock {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 2rem;
+  padding-left: 0;
+  user-select: none;
+}
+.result___ .loader {
+  border: 4px solid #f6f7f8;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  right: 74px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.result___ #close__popup {
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  background: transparent;
+  font-size: 2.6rem;
+  cursor: pointer;
+  color: black;
+}
+
+.result___ .result_title {
+  font-size: 2.1rem;
+  text-align: left;
+  width: 78%;
+  padding-left: 2rem;
+  margin: 1rem 0px;
+  padding-top: 0.7rem;
+}
+
+.result___ .result__text {
+  background-color: rgb(25, 33, 35);
+  padding: 1.5rem 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.result___ .age__info__wrapper{
+  background: hsl(210, 14%, 97%);
+  width: 100%;
+  height: 99px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.result___ .n__3{
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 2rem;
+  margin: 1rem 0px;
+}
+.age__info__wrapper{
+  padding: 0 1.5rem;
+}
+.result___ .age__info__wrapper p:nth-child(-n + 1){
+  margin-left: 0;
+}
+.result___ .age__info__wrapper p{
+  font-size: 3.8rem;
+  color: hsl(204, 78%, 41%);
+  font-weight: bold;
+  margin-left: 4rem;
+}
+.result___ .age__info__wrapper p .n_2{
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: initial;
+  display: inline-block;
+  margin-left: -1px;
+}
+.result___ .result__text span:nth-child(-n + 2 ) {
+  color: #f6f7f8;
+  font-size: 21px;
+  text-transform: capitalize;
+  padding-left: 2rem;
+}
+.result___ .result__data__wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.result___ .result__data__wrapper > div{
+  width: 50%;
+}
+.result___ .result__data strong {
+  display: block;
+  font-size: 1.8rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
+}
+
+.result___ .result__data .data__ {
+  font-size: 2rem;
+  margin: 0px 0px 0px 2rem;
+  padding: 0px 0px 0.7rem;
+  display: flex;
+}
+
+.result__data .data__ {
+  padding-bottom: 0;
+}
+.result___ .data__ img {
+  width: 2.3rem;
+}
+.result___ .n__1 {
+  font-weight: 600;
+  color: hsl(189deg 89.39% 21.04%);
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid hsl(0, 0%, 92%);
+  padding: 0;
+}
+.chart__box {
+  display: flex;
+  justify-content: center;
+}
+.chart__box #myChart{
+  width: 450px !important;
+  height: 450px !important;
+}
+.retirements__information{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f7f8;
+  height: 99px;
+  align-items: center;
+  margin: 2rem 0;
+}
+.retirements__information > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.retirements__information > div:nth-child(1){
+  border-right: 1px solid black;
+}
+.retirements__information .retirement__img__wrapper{
+  display: flex;
+  align-items: center;
+}
+.retirements__information img{
+  width: 3.5rem;
+}
+.retirement__img__wrapper strong{
+  font-size: 2rem;
+}
+.retirements__information .retirements_date span{
+  font-size: 1.8rem;
+}
+@media only screen and (max-width: 980px) {
+  html {
+    font-size: 58%;
+  }
+
+  h1 {
+    line-height: initial;
+    font-size: 2rem;
+  }
+  .container {
+    max-width: calc(var(--width) - 10%);
+  }
+  .box input {
+    padding: 0.4rem 0.9rem;
+    font-size: 1.2rem;
+  }
+  .submit_ button {
+    font-size: 1.4rem;
+  }
+  .box label {
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+  }
+  .result___ .result__data__wrapper{
+    flex-direction: column;
+  }
+  .result___ .result__data__wrapper > div{
+    width: 100%;
+  }
+  .result___ .result__data .data__ {
+    font-size: 1.6rem;
+  }
+  .chart__box #myChart{
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
